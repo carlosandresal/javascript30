@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>JavaScipt Drum Kit</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio data-key="65" src="sound/cat-mad2.wav"></audio>
+<audio data-key="83" src="sound/cat-meow.wav"></audio>
+<audio data-key="68" src="sound/cello.wav"></audio>
+<audio data-key="70" src="sound/cellonote.wav"></audio>
+<audio data-key="71" src="sound/catmeow2_NifterDotCom.wav"></audio>
+<audio data-key="72" src="sound/CELLO2.WAV"></audio>
+<audio data-key="74" src="sound/cougarq.wav"></audio>
+<audio data-key="74" src="sound/cow.wav"></audio>
+<audio data-key="76" src="sound/FOREST.WAV"></audio>
+<!-- script -->
+<script>
+	window.addEventListener('keydown', function(e) {
+		const audio = document.querySelector('audio[data-key="${e.keyCode}]"');
+		// console.log(audio);
+		if(!audio) return; //stop the function from running all together
+		audio.play();
+	});
+</script>
+<!-- <script src="script.js"></script> -->
+	
+</body>
+</html>
